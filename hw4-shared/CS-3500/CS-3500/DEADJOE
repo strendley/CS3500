@@ -1,0 +1,19 @@
+
+*** Modified files in JOE when it aborted on Sat Oct 13 16:03:52 2018
+*** JOE was aborted by signal 1
+
+*** File 'program.cpp'
+#include <iostream>
+using namespace std;
+
+int main()
+{
+
+   int str = 1;
+   int boo = 4;
+
+   int result = str or boo;
+
+   cout << "result: " << result << endl;	
+   return 0;
+}
