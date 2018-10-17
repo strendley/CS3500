@@ -32,6 +32,8 @@ LAMBDA_EXPR -> lambda ( ID_LIST ) EXPR
 
 ___Exiting scope...
 
+globalParams: 3
+3Params: 3
 PARENTHESIZED_EXPR -> LAMBDA_EXPR
 TOKEN: RPAREN    LEXEME: )
 EXPR -> ( PARENTHESIZED_EXPR )

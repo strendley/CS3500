@@ -475,7 +475,8 @@ N_LAMBDA_EXPR     : 	T_LAMBDA T_LPAREN N_ID_LIST T_RPAREN N_EXPR
 						{
 							yyerror("Arg 2 cannot be function");
 						}
-						
+						printf("globalParams: %d\n", globalNumParams);
+						printf("3Params: %d\n", $3.numParams);
 						if(globalNumParams > $3.numParams)
 							yyerror("Too many parameters in function call");
 						if(globalNumParams < $3.numParams)
@@ -509,7 +510,7 @@ N_ID_LIST         :		//EPSILON
 						}
 
 						$$.type = INT;
-						$$.numParams += 1;
+						$$.numParams = $$.numParams + 1;
 						$$.returnType = INT;
 						
 				  };	
