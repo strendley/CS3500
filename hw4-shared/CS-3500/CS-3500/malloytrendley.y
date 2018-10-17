@@ -241,7 +241,7 @@ N_PARENTHESIZED_EXPR	: 	N_ARITHLOGIC_EXPR
 						}
 							| N_EXPR_LIST
 						{
-							printRule("PARENTHESIZED_EXPR", "EXPR_LIST");
+							
 							
 							if ( $1.numParams > numParams_lambda.front() && (isLambdaFn == true && !numParams_lambda.empty()))
 							{
@@ -253,6 +253,8 @@ N_PARENTHESIZED_EXPR	: 	N_ARITHLOGIC_EXPR
 								//else if($1.numParams < numParams_lambda.front())
 									yyerror("Too few parameters in function call");
 							}
+							
+							printRule("PARENTHESIZED_EXPR", "EXPR_LIST");
 							
 							//processed
 							
@@ -475,17 +477,22 @@ N_LAMBDA_EXPR     : 	T_LAMBDA T_LPAREN N_ID_LIST T_RPAREN N_EXPR
 						{
 							yyerror("Arg 2 cannot be function");
 						}
-						printf("globalParams: %d\n", globalNumParams);
-						printf("3Params: %d\n", $3.numParams);
+						
+						//printf("globalParams: %d\n", globalNumParams);
+						//printf("3Params: %d\n", $3.numParams);
+						
 						if(globalNumParams > $3.numParams)
 							yyerror("Too many parameters in function call");
-						if(globalNumParams < $3.numParams)
+						else if(globalNumParams < $3.numParams)
 							yyerror("Too few parameters in function call");
 
-						$$.type = FUNCTION;
-						$$.numParams = globalNumParams;
-						numParams_lambda.push($3.numParams);
-						$$.returnType = $5.type;
+						else
+						{
+							$$.type = FUNCTION;
+							$$.numParams = globalNumParams;
+							$$.returnType = $5.type;
+							numParams_lambda.push($3.numParams);
+						}
 
 				  };
 				  
@@ -510,7 +517,7 @@ N_ID_LIST         :		//EPSILON
 						}
 
 						$$.type = INT;
-						$$.numParams = $$.numParams + 1;
+						$$.numParams += 1;
 						$$.returnType = INT;
 						
 				  };	
@@ -554,10 +561,12 @@ N_EXPR_LIST       : 	N_EXPR N_EXPR_LIST
 						else
 						{
 							$$.type = $1.type;
-							$$.numParams = $2.numParams + 1;
-							$$.returnType = $1.returnType;
-							globalNumParams = $$.numParams;
-						}
+						}		
+						$$.numParams = $2.numParams + 1;
+						$$.returnType = $1.returnType;
+						globalNumParams = $$.numParams;
+							
+						
 
 						
 				  }

@@ -52,7 +52,9 @@ public:
     type_struct.numParams = numParams;
     type_struct.returnType = returnType;
   }
+  
 
+  
   // Accessors
   int getNumParams() const {return type_struct.numParams;}
   int getReturnType() const{return type_struct.returnType;}
