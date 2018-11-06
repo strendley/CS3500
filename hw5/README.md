@@ -13,7 +13,7 @@ To diff files individually, use the commands:
 $make 
 
 
-$parser inputFileName.txt > myOutput.out
+$parser hw5_sample_input/inputFileName.txt > myOutput.out
 
 
 $diff myOutput.out inputFileName.txt.out --ignore-space-change --side-by-side --ignore-case --ignore-blank-lines
