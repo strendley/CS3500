@@ -1913,10 +1913,9 @@ void printRule(const char *lhs, const char *rhs)
 
 int yyerror(const char *s) 
 {
-  printf("Line %d: %s\n",numLines,s);
+  printf("Line %d: %s\n", numLines, s);
   
   exit(1);
-  /*return(1);*/
 }
 
 void printTokenInfo(const char* tokenType, const char* lexeme) 
@@ -1927,13 +1926,13 @@ void printTokenInfo(const char* tokenType, const char* lexeme)
 void beginScope()
 {
 	scopeStack.push(SYMBOL_TABLE());
-	printf("\n__Entering new scope... \n\n");
+	printf("\n___Entering new scope...\n\n");
 }
 
 void endScope()
 {
 	scopeStack.pop();
-	printf("\n__Exiting scope...\n\n");
+	printf("\n___Exiting scope...\n\n");
 }
 
 bool findEntryInAnyScope(const string theName) 
@@ -1961,7 +1960,5 @@ int main()
   {
 	yyparse();
   } while (!feof(yyin));
-
-  /*printf("%d lines processed\n", numLines);*/
   return(0);
 }
