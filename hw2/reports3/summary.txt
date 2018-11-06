@@ -1,0 +1,32 @@
+0 unexpected lines in ifPrintInputErrors.txt.out
+0 unexpected lines in ifPrintInputNoErrors.txt.out
+0 unexpected lines in letLambdaErrors.txt.out
+0 unexpected lines in letLambdaNoErrors.txt.out
+0 unexpected lines in noSyntaxError.txt.out
+0 unexpected lines in operatorsErrors.txt.out
+0 unexpected lines in operatorsNoErrors.txt.out
+
+0 unexpected lines in ifPrintInputErrors.txt.out
+0 unexpected lines in ifPrintInputNoErrors.txt.out
+0 unexpected lines in letLambdaErrors.txt.out
+0 unexpected lines in letLambdaNoErrors.txt.out
+0 unexpected lines in noSyntaxError.txt.out
+0 unexpected lines in operatorsErrors.txt.out
+0 unexpected lines in operatorsNoErrors.txt.out
+
+0 unexpected lines in ifPrintInputErrors.txt.out
+0 unexpected lines in ifPrintInputNoErrors.txt.out
+0 unexpected lines in letLambdaErrors.txt.out
+0 unexpected lines in letLambdaNoErrors.txt.out
+0 unexpected lines in noSyntaxError.txt.out
+0 unexpected lines in operatorsErrors.txt.out
+0 unexpected lines in operatorsNoErrors.txt.out
+
+0 unexpected lines in ifPrintInputErrors.txt.out
+0 unexpected lines in ifPrintInputNoErrors.txt.out
+0 unexpected lines in letLambdaErrors.txt.out
+0 unexpected lines in letLambdaNoErrors.txt.out
+0 unexpected lines in noSyntaxError.txt.out
+0 unexpected lines in operatorsErrors.txt.out
+0 unexpected lines in operatorsNoErrors.txt.out
+
