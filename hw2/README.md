@@ -6,9 +6,9 @@ To diff files individually, use the commands:
 
 $make
 
-$parser < hw3_sample_input/inputFileName.txt > myOutput.out
+$parser < hw2_sample_input/inputFileName.txt > myOutput.out
 
-$diff myOutput.out hw3_expected_output/inputFileName.txt.out --ignore-space-change --side-by-side --ignore-case --ignore-blank-lines
+$diff myOutput.out hw2_expected_output/inputFileName.txt.out --ignore-space-change --side-by-side --ignore-case --ignore-blank-lines
 
 Note: the make file flex's the .l file, bison's the .y file, and compiles the parser
 
