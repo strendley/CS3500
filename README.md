@@ -8,4 +8,4 @@ Covers basic design of programming languages, compilers and interpreters. The co
 1. HW1 - HW5 : Bison Programs
 2. HW6 : Lisp Program
 3. HW7 : Perl program
-4. HW9 : Bash Scripting
+4. HW8 : Bash Scripting
